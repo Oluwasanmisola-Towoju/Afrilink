@@ -1,0 +1,293 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed":"#001f2a","background":"#f8f9ff","on-secondary-fixed":"#3c0800","secondary-container":"#fc9174","surface-dim":"#cbdbf5","secondary":"#9a442d","tertiary":"#341b00","tertiary-container":"#4f2f0a","tertiary-fixed-dim":"#f0bd8c","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","tertiary-fixed":"#ffdcbe","primary-fixed-dim":"#a2cde2","surface-container-high":"#dce9ff","inverse-surface":"#213145","secondary-fixed-dim":"#ffb4a1","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary-fixed":"#bde9ff","on-secondary":"#ffffff","on-primary-fixed-variant":"#1f4c5d","on-tertiary-fixed":"#2c1600","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","primary-container":"#073b4c","on-tertiary-container":"#c59669","on-secondary-container":"#742814","surface-bright":"#f8f9ff","outline-variant":"#c1c7cc","outline":"#71787c","on-surface-variant":"#41484b","inverse-primary":"#a2cde2","surface":"#f8f9ff","primary":"#002431","on-tertiary-fixed-variant":"#623f19","on-secondary-fixed-variant":"#7c2e19","surface-tint":"#396476","on-error":"#ffffff","on-primary":"#ffffff","surface-container":"#e5eeff","on-surface":"#0b1c30","error":"#ba1a1a","secondary-fixed":"#ffdbd2","on-primary-container":"#7ba5b9","on-background":"#0b1c30","surface-variant":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"24px","sidebar-width":"280px","unit":"4px","container-max":"1440px","margin-desktop":"32px","margin-mobile":"16px"},"fontFamily":{"headline-md":["Hanken Grotesk"],"body-lg":["Inter"],"data-mono":["JetBrains Mono"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"data-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-low z-50 flex flex-col border-r border-outline-variant"><div class="flex items-center gap-3 px-8 h-20 mb-4"><img alt="AfriLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsTbEOO-nm_1RhdTCxqAToto8mMRC5Lf6E0lxxpcp_hF6JZnbRXs7r6ctjdJbf0t9ITv3-JRXP04x4xTyt-_5F60uTWD-OXIuYN-8HsQLiN0AOsAanJ_Jyw0Djcwa_xQhDIT5JEr0Via6kZ7qguBrT9yQv4YWT4gOIjd5DZn0SG8IAzXCALjXVONR4egW31qQl_qHt1KD9ezSWFgm6nPUsFzBbwU5245gWb6RrGZUFQkqombpkJjI"/><span class="font-headline-md text-headline-md text-primary tracking-tight">AfriLink</span></div><nav class="flex-1 px-4 flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container shadow-sm"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-4">dashboard</span>Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all font-label-md bg-primary-container text-on-primary-container shadow-sm" data-path="discovery" href="#"><span class="material-symbols-outlined mr-4">explore</span>Discovery</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="transactions" href="#"><span class="material-symbols-outlined mr-4">receipt_long</span>Transactions</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="payments" href="#"><span class="material-symbols-outlined mr-4">payments</span>Payments</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="history" href="#"><span class="material-symbols-outlined mr-4">history</span>History</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="disputes" href="#"><span class="material-symbols-outlined mr-4">gavel</span>Disputes</a><div class="my-4 border-t border-outline-variant"></div><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="admin" href="#"><span class="material-symbols-outlined mr-4">admin_panel_settings</span>Admin</a></nav><div class="px-4 py-4"><div class="p-4 bg-primary-container rounded-xl flex items-center justify-between shadow-sm"><div class="flex items-center gap-3"><img alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0sfw2oa1H4AGHTGoYCcAzbQbCw-4EA_B8DLom45Sje0ABXrH2qqdqR2U8tRckE3ZhRFs8tJf9affKXUj_o3XvzsHNjlk2kUBkdzTXUDB3R1qfQylzcsXlaz_eD8Xie3Rt3RmHfTlZ_KM6YtyS1bT7DK0HrBiGg7K2PPExhhJyfAqlIqI3LnpFVYpcDq7zZN2K2C5yMcBB2VmSa9pkbXfUs5eAVHLUfjXxtuXVDdM7YRLKU0VgKIE"/><div class="flex flex-col"><span class="font-label-md text-on-primary-container">B. Tunde</span><span class="text-[10px] text-on-primary-container/80 uppercase tracking-widest">Export Manager</span></div></div><span class="material-symbols-outlined text-on-primary-container text-sm">logout</span></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-margin-desktop border-b border-outline-variant"><div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">search</span><input class="bg-transparent border-none focus:ring-0 text-body-sm w-64" placeholder="Search trade assets..." type="text"/></div><div class="flex items-center gap-6"><div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-outline-variant"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="font-label-md text-on-surface">Bank Connection: Active</span></div><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span></div></header><main class="relative pt-20 flex-1 flex flex-col p-margin-desktop"><div class="flex flex-col w-full relative">
+<div class="flex justify-between items-end mb-8 relative z-10">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-2">Network Discovery</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Find verified partners across the African continent.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-md tracking-wide hover:bg-on-primary-fixed-variant transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+         Invite Partner
+       </button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8 relative z-10">
+<!-- Filter Sidebar -->
+<div class="col-span-3 flex flex-col gap-6">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6">
+<h2 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-6">Search Parameters</h2>
+<div class="mb-6 relative">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Search Network</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md py-3 pl-12 pr-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Search businesses..." type="text" value="Coffee exporters in Kenya"/>
+</div>
+</div>
+<div class="mb-6">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-4">Verification Status</label>
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 rounded text-primary bg-surface-container border-none focus:ring-0 cursor-pointer accent-primary" id="verified_only" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer flex items-center gap-2" for="verified_only">
+               Verified Only
+               <span class="material-symbols-outlined text-[16px] text-[#22c55e]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</label>
+</div>
+</div>
+<hr class="border-t border-outline-variant/30 my-6"/>
+<div class="mb-6">
+<div class="flex justify-between items-center mb-4">
+<label class="block font-label-md text-label-md text-on-surface-variant">Country</label>
+<span class="font-label-md text-label-md text-primary cursor-pointer">Clear</span>
+</div>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded text-primary bg-surface-container border-none focus:ring-0 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Kenya</span>
+<span class="ml-auto font-data-mono text-data-mono text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">42</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-primary bg-surface-container border-none focus:ring-0 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Ethiopia</span>
+<span class="ml-auto font-data-mono text-data-mono text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">28</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-primary bg-surface-container border-none focus:ring-0 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Rwanda</span>
+<span class="ml-auto font-data-mono text-data-mono text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">15</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-primary bg-surface-container border-none focus:ring-0 accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Uganda</span>
+<span class="ml-auto font-data-mono text-data-mono text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">31</span>
+</label>
+</div>
+<button class="text-primary font-label-md text-label-md mt-4 flex items-center gap-1 hover:underline">
+             View all <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<hr class="border-t border-outline-variant/30 my-6"/>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-4">Industry</label>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary text-on-primary px-3 py-1.5 rounded-full font-body-sm text-body-sm cursor-pointer flex items-center gap-1">
+               Agriculture <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span class="bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-body-sm text-body-sm cursor-pointer transition-colors">Logistics</span>
+<span class="bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-body-sm text-body-sm cursor-pointer transition-colors">Manufacturing</span>
+<span class="bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-body-sm text-body-sm cursor-pointer transition-colors">Textiles</span>
+<span class="bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-body-sm text-body-sm cursor-pointer transition-colors">Minerals</span>
+</div>
+</div>
+</div>
+<!-- Promotional/Info Card -->
+<div class="bg-secondary-container text-on-secondary-container rounded-2xl p-6 relative overflow-hidden shadow-sm">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+<span class="material-symbols-outlined text-4xl mb-4 opacity-80">verified_user</span>
+<h3 class="font-headline-md text-headline-md mb-2 relative z-10">Trust in Trade</h3>
+<p class="font-body-sm text-body-sm opacity-90 relative z-10 mb-4">
+           AfriLink Verified businesses undergo stringent KYC and operational checks to ensure trade security.
+         </p>
+<button class="font-label-md text-label-md underline hover:text-on-secondary-fixed transition-colors">Learn about verification</button>
+</div>
+</div>
+<!-- Results Area -->
+<div class="col-span-9">
+<div class="flex justify-between items-center mb-6">
+<div class="font-body-md text-body-md text-on-surface-variant">
+           Showing <span class="font-data-mono text-on-surface font-bold">1</span> to <span class="font-data-mono text-on-surface font-bold">6</span> of <span class="font-data-mono text-on-surface font-bold">42</span> results
+         </div>
+<div class="flex items-center gap-4">
+<label class="font-body-sm text-body-sm text-on-surface-variant">Sort by:</label>
+<select class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm appearance-none pr-10 relative cursor-pointer">
+<option>Verification Score</option>
+<option>Trade Volume</option>
+<option>Years Active</option>
+<option>A-Z</option>
+</select>
+<!-- Custom Select Arrow -->
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group relative flex flex-col h-full">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer transition-colors">bookmark</span>
+</div>
+<div class="flex gap-4 items-start mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="A clean, modern corporate logo featuring a stylized coffee bean intersecting with a sunrise, using earthy browns and vibrant orange, on a clean white background. High contrast, professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABh8bw6DJEdEtVHFLbzkstaPbYBjXejgsXy0ft4eddxTtCEZYyR6dfl2miH-RFlb5cCSuO6K8OqJ7nLpumH2Jhz3tVGEzqkLlbfujLVUoGbNogfw0rtCr_EK5PzFJLiTWUVP6lXFDKu7xfi-DwVui3_DdYDsSbYVEGKyjO5W-RL5PYlISx4qXnoKkDj7B1ISYeJvS_PKxJ_qsy9z_Ht4Df8LoMTgpcHXeSIXvQD46zuv1RRRub-Ek"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Rift Valley Roasters Ltd.</h3>
+<span class="material-symbols-outlined text-[#22c55e] text-[18px]" style="font-variation-settings: 'FILL' 1;" title="Verified Business">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Nairobi, Kenya
+               </p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 mb-6 flex-grow">
+             Premium exporter of AA grade Arabica coffee beans sourced directly from cooperative farms in the Mount Kenya region. Focus on sustainable and ethical trade practices.
+           </p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Trade Volume</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">$4.2M</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Successful Trades</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">156</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex gap-2">
+<span class="bg-tertiary-container/20 text-tertiary px-2 py-1 rounded font-data-mono text-[11px]">Agriculture</span>
+<span class="bg-primary-container/20 text-primary px-2 py-1 rounded font-data-mono text-[11px]">Export</span>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+               View Profile <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group relative flex flex-col h-full">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer transition-colors">bookmark</span>
+</div>
+<div class="flex gap-4 items-start mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="A minimalist logo design for a trading company, featuring geometric shapes forming a mountain peak, in shades of deep teal and soft grey, set against a pristine white background. Corporate and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6vSFHQtt6t-JaLdQvr3ZjhVMtmeA6-PkI5wtp8nl-LF_KTO4hapMOTK5H2gfA9-aY_uGCz1ZYPOnw3ILOKxn6leTbcTZpuQWoI01d89pnhLxJYu-SSf4FssxskRZsHc9q3J8l96eEVoKPbveKVHR2QJ33igNSrJXIJJ-Hh0XuryNFFL2UAr75oOC7OLYcg8tcCBqDo8qtnqtihJBBPVe0J_g_pzoUBXeD_ipWoBXokKAsSIvikjI"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Highland Bean Co.</h3>
+<span class="material-symbols-outlined text-[#22c55e] text-[18px]" style="font-variation-settings: 'FILL' 1;" title="Verified Business">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Eldoret, Kenya
+               </p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 mb-6 flex-grow">
+             Specializing in fair-trade certified green coffee. We manage end-to-end logistics from washing stations in the Rift Valley directly to international roasters.
+           </p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Trade Volume</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">$1.8M</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Successful Trades</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">89</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex gap-2">
+<span class="bg-tertiary-container/20 text-tertiary px-2 py-1 rounded font-data-mono text-[11px]">Agriculture</span>
+<span class="bg-surface-variant text-on-surface px-2 py-1 rounded font-data-mono text-[11px]">Logistics</span>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+               View Profile <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group relative flex flex-col h-full">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer transition-colors">bookmark</span>
+</div>
+<div class="flex gap-4 items-start mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<span class="font-display-lg text-primary/40">S</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Savannah Agri-Exports</h3>
+<span class="material-symbols-outlined text-[#22c55e] text-[18px]" style="font-variation-settings: 'FILL' 1;" title="Verified Business">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Mombasa, Kenya
+               </p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 mb-6 flex-grow">
+             Large scale agricultural commodities trader operating out of the Port of Mombasa. While tea is our primary export, we handle significant volumes of robusta and arabica blends.
+           </p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Trade Volume</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">$12.4M</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col items-center justify-center text-center">
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-1 uppercase tracking-widest text-[10px]">Successful Trades</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">412</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex gap-2">
+<span class="bg-tertiary-container/20 text-tertiary px-2 py-1 rounded font-data-mono text-[11px]">Commodities</span>
+<span class="bg-primary-container/20 text-primary px-2 py-1 rounded font-data-mono text-[11px]">Export</span>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+               View Profile <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow group relative flex flex-col h-full opacity-75">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer transition-colors">bookmark</span>
+</div>
+<div class="flex gap-4 items-start mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="A modern monogram logo featuring interwoven letters K and C in dark green and gold, on a clean white background. Elegant and professional aesthetic for a commodities trader." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwad6hRQfm1PfbgfRpl5jBduCpb9uSWKwVi5vlRI-d0INr9gfXitg67gzU0LAZu7FeDhIs_QNfJjf93QcKOTh5N9KgfDf9oc7KONMxowFSLEFehfvsoG6mkDBZR4oZRCeys80xj1bvSWzgqWfVqIXH2K-fMqDpkNErsR8HoiyZTidHhWoLayC_1heb35Uiscm6dG6E21a04OI4OPBRdjD8Zbi4tIOCGgRBaJfkAxI_e0M_ZekHVwo"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">KiliCafe Co-op</h3>
+<!-- Missing verified badge -->
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Nyeri, Kenya
+               </p>
+</div>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">pending_actions</span>
+<p class="font-body-sm text-body-sm text-on-surface">Verification in progress. Limited trading capabilities until complete.</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 mb-6 flex-grow">
+             A newly formed cooperative representing over 200 smallholder farmers in the Nyeri county, looking to establish direct trade routes.
+           </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex gap-2">
+<span class="bg-tertiary-container/20 text-tertiary px-2 py-1 rounded font-data-mono text-[11px]">Agriculture</span>
+<span class="bg-outline-variant/30 text-on-surface-variant px-2 py-1 rounded font-data-mono text-[11px]">Co-op</span>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+               View Profile <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-12">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary text-on-primary font-label-md shadow-sm">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high font-label-md transition-colors">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high font-label-md transition-colors">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high font-label-md transition-colors">7</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

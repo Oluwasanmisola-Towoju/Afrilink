@@ -1,0 +1,273 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed":"#001f2a","background":"#f8f9ff","on-secondary-fixed":"#3c0800","secondary-container":"#fc9174","surface-dim":"#cbdbf5","secondary":"#9a442d","tertiary":"#341b00","tertiary-container":"#4f2f0a","tertiary-fixed-dim":"#f0bd8c","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","tertiary-fixed":"#ffdcbe","primary-fixed-dim":"#a2cde2","surface-container-high":"#dce9ff","inverse-surface":"#213145","secondary-fixed-dim":"#ffb4a1","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary-fixed":"#bde9ff","on-secondary":"#ffffff","on-primary-fixed-variant":"#1f4c5d","on-tertiary-fixed":"#2c1600","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","primary-container":"#073b4c","on-tertiary-container":"#c59669","on-secondary-container":"#742814","surface-bright":"#f8f9ff","outline-variant":"#c1c7cc","outline":"#71787c","on-surface-variant":"#41484b","inverse-primary":"#a2cde2","surface":"#f8f9ff","primary":"#002431","on-tertiary-fixed-variant":"#623f19","on-secondary-fixed-variant":"#7c2e19","surface-tint":"#396476","on-error":"#ffffff","on-primary":"#ffffff","surface-container":"#e5eeff","on-surface":"#0b1c30","error":"#ba1a1a","secondary-fixed":"#ffdbd2","on-primary-container":"#7ba5b9","on-background":"#0b1c30","surface-variant":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"24px","sidebar-width":"280px","unit":"4px","container-max":"1440px","margin-desktop":"32px","margin-mobile":"16px"},"fontFamily":{"headline-md":["Hanken Grotesk"],"body-lg":["Inter"],"data-mono":["JetBrains Mono"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"data-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-low z-50 flex flex-col border-r border-outline-variant"><div class="flex items-center gap-3 px-8 h-20 mb-4"><img alt="AfriLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsTbEOO-nm_1RhdTCxqAToto8mMRC5Lf6E0lxxpcp_hF6JZnbRXs7r6ctjdJbf0t9ITv3-JRXP04x4xTyt-_5F60uTWD-OXIuYN-8HsQLiN0AOsAanJ_Jyw0Djcwa_xQhDIT5JEr0Via6kZ7qguBrT9yQv4YWT4gOIjd5DZn0SG8IAzXCALjXVONR4egW31qQl_qHt1KD9ezSWFgm6nPUsFzBbwU5245gWb6RrGZUFQkqombpkJjI"/><span class="font-headline-md text-headline-md text-primary tracking-tight">AfriLink</span></div><nav class="flex-1 px-4 flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container shadow-sm"><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all font-label-md bg-primary-container text-on-primary-container shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-4">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="discovery" href="#"><span class="material-symbols-outlined mr-4">explore</span>Discovery</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="transactions" href="#"><span class="material-symbols-outlined mr-4">receipt_long</span>Transactions</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="payments" href="#"><span class="material-symbols-outlined mr-4">payments</span>Payments</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="history" href="#"><span class="material-symbols-outlined mr-4">history</span>History</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="disputes" href="#"><span class="material-symbols-outlined mr-4">gavel</span>Disputes</a><div class="my-4 border-t border-outline-variant"></div><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="admin" href="#"><span class="material-symbols-outlined mr-4">admin_panel_settings</span>Admin</a></nav><div class="px-4 py-4"><div class="p-4 bg-primary-container rounded-xl flex items-center justify-between shadow-sm"><div class="flex items-center gap-3"><img alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0sfw2oa1H4AGHTGoYCcAzbQbCw-4EA_B8DLom45Sje0ABXrH2qqdqR2U8tRckE3ZhRFs8tJf9affKXUj_o3XvzsHNjlk2kUBkdzTXUDB3R1qfQylzcsXlaz_eD8Xie3Rt3RmHfTlZ_KM6YtyS1bT7DK0HrBiGg7K2PPExhhJyfAqlIqI3LnpFVYpcDq7zZN2K2C5yMcBB2VmSa9pkbXfUs5eAVHLUfjXxtuXVDdM7YRLKU0VgKIE"/><div class="flex flex-col"><span class="font-label-md text-on-primary-container">B. Tunde</span><span class="text-[10px] text-on-primary-container/80 uppercase tracking-widest">Export Manager</span></div></div><span class="material-symbols-outlined text-on-primary-container text-sm">logout</span></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-margin-desktop border-b border-outline-variant"><div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">search</span><input class="bg-transparent border-none focus:ring-0 text-body-sm w-64" placeholder="Search trade assets..." type="text"/></div><div class="flex items-center gap-6"><div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-outline-variant"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="font-label-md text-on-surface">Bank Connection: Active</span></div><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span></div></header><main class="relative pt-20 flex-1 flex flex-col p-margin-desktop"><div class="flex flex-col w-full relative h-full bg-surface-container-lowest">
+<div class="relative w-full h-[320px] bg-primary rounded-xl overflow-hidden shadow-sm flex items-center justify-between p-12 shrink-0">
+<div class="absolute inset-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-primary-fixed-dim/20 to-transparent blur-3xl -translate-y-1/2 translate-x-1/4 rounded-full"></div>
+<div class="z-10 flex flex-col items-start gap-6 max-w-2xl">
+<div class="flex items-center gap-4">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center p-2 relative">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional corporate headshot of an African business executive, sharply dressed, confident smile, warm lighting, deep teal background, conveying trust and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9cxaMziGFJR8Q2Gy3ftJfCWKLx2U1AWAxV2jXrLc7zqWW4QI6-ARpGDPJkXHYQHv-Fho3OYTigtmwvySGIG-80iLa8IL_Gb3Zg7t3AYMaty6FHREjPnsVYlNC3C2-fbddhKKVd5kWepOeMIqukq--zvh13gmuaMXto7S1sW1GFFtzZr3b36V6kqtKssw1xO7a-JqPAIpWqNei1mvuYl8w1oPUb_aYwF6ZEkiEVV1L3hK1a_dHWRc"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-fixed text-on-secondary-fixed w-8 h-8 rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<h1 class="font-display-lg text-display-lg text-on-primary m-0">Zenith Exports Ltd.</h1>
+<span class="bg-secondary/20 text-secondary-fixed px-3 py-1 rounded-full font-label-md uppercase tracking-wider flex items-center gap-1 backdrop-blur-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">workspace_premium</span>
+                            Verified Business
+                        </span>
+</div>
+<p class="font-body-lg text-body-lg text-primary-fixed m-0 mt-2 opacity-90">Agricultural Commodities & Logistics • Lagos, NG</p>
+</div>
+</div>
+<div class="flex gap-4 mt-2">
+<button class="bg-surface-container-lowest text-primary px-6 py-3 rounded-full font-label-md uppercase tracking-wider hover:bg-surface-variant transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Message
+                </button>
+<button class="bg-transparent border border-primary-fixed text-on-primary px-6 py-3 rounded-full font-label-md uppercase tracking-wider hover:bg-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_link</span>
+                    Propose Trade
+                </button>
+</div>
+</div>
+<div class="z-10 flex gap-12 bg-surface-container-lowest/10 p-6 rounded-2xl backdrop-blur-md shadow-sm border border-surface-container-lowest/20">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-on-primary">24</span>
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider mt-1 opacity-80">Completed Trades</span>
+</div>
+<div class="w-[1px] bg-primary-fixed/30 h-16 self-center"></div>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-secondary-fixed">100%</span>
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider mt-1 opacity-80">Success Rate</span>
+</div>
+<div class="w-[1px] bg-primary-fixed/30 h-16 self-center"></div>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-on-primary">0</span>
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider mt-1 opacity-80">Disputes</span>
+</div>
+</div>
+</div>
+<div class="flex gap-8 mt-12 w-full max-w-[1440px] mx-auto px-4 pb-12">
+<div class="w-1/3 flex flex-col gap-8 shrink-0">
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-8 flex flex-col gap-6 sticky top-24 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full translate-x-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:scale-150"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2 m-0 relative z-10">
+<span class="material-symbols-outlined text-primary">gpp_good</span>
+                    Trust Profile
+                </h2>
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex justify-between items-center bg-surface p-4 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                            Member Since
+                        </span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">2023</span>
+</div>
+<div class="flex justify-between items-center bg-surface p-4 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+                            KYB Status
+                        </span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-md text-label-md uppercase tracking-wide flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Verified
+                        </span>
+</div>
+<div class="flex justify-between items-center bg-surface p-4 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+                            Banking
+                        </span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Connected</span>
+</div>
+</div>
+<div class="mt-4">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-4">Verification Documents</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors group/doc">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Certificate of Incorporation</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant text-[11px]">Verified on Oct 12, 2023</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover/doc:opacity-100 transition-opacity">download</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors group/doc">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Director ID</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant text-[11px]">Verified on Oct 15, 2023</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover/doc:opacity-100 transition-opacity">download</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-8 overflow-hidden relative group h-64 flex flex-col justify-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sunlit, active container port in West Africa, massive cranes moving colorful shipping containers, ships docked, representing bustling trade and logistics, modern aesthetic with teal and terracotta highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvQVQIrW8nrHs12dMT8WOBkdyGusGK-1k55XXIaEFrJTdS7ACf1nFar_mB-B7FM2XNbtqvRB-zjpeuXBbzkluAQZfqgVbfmA8YJ89lzZmyx5dxEZLLsC1gG4pOOyhRaVDiVIWbMMhwsfwK0VoSEo70-pnbPJQ5YMIJWGqqPZTWUW27fnwoNEkJP0JcRJMrItmk2gA_G_DM1WRfhKPTLifyLFrf9Ruk79R5UmjZgOiaccBy1hM4r0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="relative z-10 text-on-primary flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed">Primary Hub</span>
+<h3 class="font-headline-md text-headline-md m-0">Lagos Port Complex</h3>
+<p class="font-body-sm text-body-sm opacity-90 m-0">Apapa, Lagos State, Nigeria</p>
+</div>
+</div>
+</div>
+<div class="w-2/3 flex flex-col gap-8">
+<div class="flex justify-between items-end mb-2">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface m-0">Recent Trade Activity</h2>
+<p class="font-body-md text-body-md text-on-surface-variant m-0">Summary of the last 6 months of verified transactions.</p>
+</div>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md uppercase tracking-wider flex items-center gap-1 transition-colors">
+                    View Full History <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest shadow-sm rounded-xl overflow-hidden flex flex-col">
+<div class="grid grid-cols-12 gap-4 px-6 py-4 bg-surface-container-low font-label-md text-label-md text-on-surface-variant uppercase tracking-wider border-b border-surface-variant/30">
+<div class="col-span-3">Trade Ref</div>
+<div class="col-span-3">Counterparty</div>
+<div class="col-span-2 text-right">Value</div>
+<div class="col-span-2">Date</div>
+<div class="col-span-2 text-right">Status</div>
+</div>
+<div class="flex flex-col divide-y divide-surface-variant/20 relative">
+<div class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-surface-container-lowest/50 transition-colors group">
+<div class="col-span-3 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface font-medium group-hover:text-primary transition-colors">TRD-2391-XC</span>
+</div>
+<div class="col-span-3">
+<span class="font-body-sm text-body-sm text-on-surface truncate block">Ghana Cocoa Board</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-data-mono text-data-mono text-on-surface">$145,000</span>
+</div>
+<div class="col-span-2 text-on-surface-variant font-body-sm text-body-sm">
+                            Nov 12, 2023
+                        </div>
+<div class="col-span-2 flex justify-end">
+<span class="bg-green-100/50 text-green-800 px-3 py-1 rounded-full font-label-md text-[10px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Complete
+                            </span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-surface-container-lowest/50 transition-colors group">
+<div class="col-span-3 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">agriculture</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface font-medium group-hover:text-primary transition-colors">TRD-2388-ZA</span>
+</div>
+<div class="col-span-3">
+<span class="font-body-sm text-body-sm text-on-surface truncate block">AgriCorp South Africa</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-data-mono text-data-mono text-on-surface">$82,500</span>
+</div>
+<div class="col-span-2 text-on-surface-variant font-body-sm text-body-sm">
+                            Oct 28, 2023
+                        </div>
+<div class="col-span-2 flex justify-end">
+<span class="bg-green-100/50 text-green-800 px-3 py-1 rounded-full font-label-md text-[10px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Complete
+                            </span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-surface-container-lowest/50 transition-colors group bg-surface/30">
+<div class="col-span-3 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">warehouse</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface font-medium group-hover:text-primary transition-colors">TRD-2405-KE</span>
+</div>
+<div class="col-span-3">
+<span class="font-body-sm text-body-sm text-on-surface truncate block">Nairobi Freight Ltd.</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-data-mono text-data-mono text-on-surface">$210,000</span>
+</div>
+<div class="col-span-2 text-on-surface-variant font-body-sm text-body-sm">
+                            Dec 05, 2023
+                        </div>
+<div class="col-span-2 flex justify-end">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-md text-[10px] uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span> In Progress
+                            </span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-surface-container-lowest/50 transition-colors group">
+<div class="col-span-3 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface font-medium group-hover:text-primary transition-colors">TRD-2371-EG</span>
+</div>
+<div class="col-span-3">
+<span class="font-body-sm text-body-sm text-on-surface truncate block">Cairo Imports Co.</span>
+</div>
+<div class="col-span-2 text-right">
+<span class="font-data-mono text-data-mono text-on-surface">$55,200</span>
+</div>
+<div class="col-span-2 text-on-surface-variant font-body-sm text-body-sm">
+                            Sep 14, 2023
+                        </div>
+<div class="col-span-2 flex justify-end">
+<span class="bg-green-100/50 text-green-800 px-3 py-1 rounded-full font-label-md text-[10px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Complete
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-8 relative overflow-hidden">
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 relative z-10">Performance Analytics</h3>
+<div class="flex gap-8 items-end relative z-10 h-48">
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-surface-container rounded-t-lg relative flex items-end overflow-hidden h-32">
+<div class="w-full bg-primary h-[40%] rounded-t-lg transition-all duration-500 group-hover:bg-primary-container"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Q1</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-surface-container rounded-t-lg relative flex items-end overflow-hidden h-32">
+<div class="w-full bg-primary h-[65%] rounded-t-lg transition-all duration-500 group-hover:bg-primary-container"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Q2</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-surface-container rounded-t-lg relative flex items-end overflow-hidden h-32">
+<div class="w-full bg-secondary h-[85%] rounded-t-lg transition-all duration-500 group-hover:bg-secondary-container"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Q3</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-surface-container rounded-t-lg relative flex items-end overflow-hidden h-32">
+<div class="w-full bg-primary h-[30%] rounded-t-lg transition-all duration-500 group-hover:bg-primary-container"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Q4</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,209 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed":"#001f2a","background":"#f8f9ff","on-secondary-fixed":"#3c0800","secondary-container":"#fc9174","surface-dim":"#cbdbf5","secondary":"#9a442d","tertiary":"#341b00","tertiary-container":"#4f2f0a","tertiary-fixed-dim":"#f0bd8c","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","tertiary-fixed":"#ffdcbe","primary-fixed-dim":"#a2cde2","surface-container-high":"#dce9ff","inverse-surface":"#213145","secondary-fixed-dim":"#ffb4a1","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary-fixed":"#bde9ff","on-secondary":"#ffffff","on-primary-fixed-variant":"#1f4c5d","on-tertiary-fixed":"#2c1600","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","primary-container":"#073b4c","on-tertiary-container":"#c59669","on-secondary-container":"#742814","surface-bright":"#f8f9ff","outline-variant":"#c1c7cc","outline":"#71787c","on-surface-variant":"#41484b","inverse-primary":"#a2cde2","surface":"#f8f9ff","primary":"#002431","on-tertiary-fixed-variant":"#623f19","on-secondary-fixed-variant":"#7c2e19","surface-tint":"#396476","on-error":"#ffffff","on-primary":"#ffffff","surface-container":"#e5eeff","on-surface":"#0b1c30","error":"#ba1a1a","secondary-fixed":"#ffdbd2","on-primary-container":"#7ba5b9","on-background":"#0b1c30","surface-variant":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"24px","sidebar-width":"280px","unit":"4px","container-max":"1440px","margin-desktop":"32px","margin-mobile":"16px"},"fontFamily":{"headline-md":["Hanken Grotesk"],"body-lg":["Inter"],"data-mono":["JetBrains Mono"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"data-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface min-h-screen flex items-center justify-center"><main class="w-full"><div class="flex flex-col w-full items-center justify-center min-h-[calc(100vh-64px)] relative">
+<!-- Ambient background elements -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+</div>
+<div class="w-full max-w-md bg-surface rounded-xl shadow-xl overflow-hidden relative z-10 flex flex-col">
+<!-- Header -->
+<div class="p-8 pb-6 flex flex-col items-center border-b border-outline-variant/30 relative overflow-hidden">
+<!-- Subtle background pattern in header -->
+<svg class="absolute inset-0 w-full h-full text-primary-fixed-dim/10" height="100%" width="100%">
+<pattern height="24" id="grid" patternunits="userSpaceOnUse" width="24">
+<path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 relative z-10 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary text-2xl">account_balance</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-1 text-center relative z-10">AfriLink</h1>
+<p class="font-body-md text-body-md text-on-surface-variant text-center relative z-10">Secure Trade Finance Gateway</p>
+</div>
+<!-- Form Container -->
+<div class="p-8 bg-surface-container-lowest">
+<!-- Tabs (Login / Sign Up) -->
+<div class="flex p-1 bg-surface-container rounded-lg mb-8 relative">
+<div class="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-surface-container-lowest rounded-md shadow-sm transition-all duration-300 ease-in-out" id="tabIndicator"></div>
+<button class="flex-1 py-2 font-label-md text-label-md text-on-surface relative z-10 transition-colors" id="btnLogin" onclick="switchTab('login')">Log In</button>
+<button class="flex-1 py-2 font-label-md text-label-md text-on-surface-variant relative z-10 transition-colors" id="btnSignup" onclick="switchTab('signup')">Sign Up</button>
+</div>
+<form class="flex flex-col gap-5" id="authForm">
+<!-- Toggle: Register as Business (Only visible in Sign Up) -->
+<div class="hidden flex items-center justify-between p-4 bg-surface-container-low rounded-lg transition-all duration-300 transform opacity-0 translate-y-2" id="businessToggleContainer">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Register as Business</span>
+<span class="font-data-mono text-[11px] leading-[16px] text-on-surface-variant">Requires trade license verification</span>
+</div>
+<button class="w-11 h-6 bg-outline-variant rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" id="businessToggleBtn" type="button">
+<span class="absolute left-1 top-1 w-4 h-4 bg-surface-container-lowest rounded-full transition-transform duration-300 shadow-sm" id="businessToggleKnob"></span>
+</button>
+</div>
+<!-- Business Name (Only visible if Business toggle is ON during Sign Up) -->
+<div class="hidden flex-col gap-1 transition-all duration-300 transform opacity-0 -translate-y-2 h-0 overflow-hidden" id="businessNameField">
+<label class="font-label-md text-label-md text-on-surface-variant" for="businessName">Business Legal Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">domain</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="businessName" placeholder="e.g. Pan-African Logistics Ltd." type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">mail</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="email" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<a class="font-label-md text-[11px] leading-[16px] font-semibold text-primary hover:text-primary-container transition-colors" href="#" id="forgotPasswordLink">Forgot password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+<input class="w-full h-12 pl-10 pr-10 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors focus:outline-none" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="passwordVisibilityIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action Button -->
+<button class="mt-4 w-full h-12 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm shadow-primary/20 hover:bg-primary-container hover:shadow-md transition-all flex items-center justify-center gap-2 relative overflow-hidden group" id="submitBtn" type="submit">
+<span class="relative z-10 transition-transform group-hover:-translate-x-1" id="submitText">Log In</span>
+<span class="material-symbols-outlined text-[18px] relative z-10 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all absolute right-4">arrow_forward</span>
+<!-- Ripple effect placeholder -->
+<div class="absolute inset-0 bg-white/20 scale-0 group-active:scale-100 rounded-full transition-transform duration-300 opacity-0 group-active:opacity-100"></div>
+</button>
+</form>
+<!-- Footer details -->
+<div class="mt-6 flex flex-col items-center justify-center gap-2">
+<p class="font-data-mono text-[11px] leading-[16px] text-outline-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+           End-to-end encrypted
+         </p>
+<p class="font-data-mono text-[10px] leading-[14px] text-outline-variant/70 text-center max-w-[250px]">
+           By proceeding, you agree to our <a class="underline hover:text-outline transition-colors" href="#">Terms of Service</a> & <a class="underline hover:text-outline transition-colors" href="#">Privacy Policy</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentMode = 'login';
+  let isBusiness = false;
+
+  function switchTab(mode) {
+    if (currentMode === mode) return;
+    currentMode = mode;
+    
+    const indicator = document.getElementById('tabIndicator');
+    const btnLogin = document.getElementById('btnLogin');
+    const btnSignup = document.getElementById('btnSignup');
+    const businessToggleContainer = document.getElementById('businessToggleContainer');
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+    const submitText = document.getElementById('submitText');
+    const businessNameField = document.getElementById('businessNameField');
+
+    if (mode === 'signup') {
+      indicator.style.transform = 'translateX(calc(100% + 8px))';
+      btnSignup.classList.replace('text-on-surface-variant', 'text-on-surface');
+      btnLogin.classList.replace('text-on-surface', 'text-on-surface-variant');
+      
+      businessToggleContainer.classList.remove('hidden');
+      // small delay for transition
+      setTimeout(() => {
+        businessToggleContainer.classList.remove('opacity-0', 'translate-y-2');
+      }, 10);
+      
+      forgotPasswordLink.classList.add('hidden');
+      submitText.textContent = 'Create Account';
+      
+      if(isBusiness) {
+        showBusinessField();
+      }
+      
+    } else {
+      indicator.style.transform = 'translateX(0)';
+      btnLogin.classList.replace('text-on-surface-variant', 'text-on-surface');
+      btnSignup.classList.replace('text-on-surface', 'text-on-surface-variant');
+      
+      businessToggleContainer.classList.add('opacity-0', 'translate-y-2');
+      setTimeout(() => {
+        businessToggleContainer.classList.add('hidden');
+      }, 300);
+
+      forgotPasswordLink.classList.remove('hidden');
+      submitText.textContent = 'Log In';
+      hideBusinessField();
+    }
+  }
+
+  const businessToggleBtn = document.getElementById('businessToggleBtn');
+  const businessToggleKnob = document.getElementById('businessToggleKnob');
+
+  businessToggleBtn.addEventListener('click', () => {
+    isBusiness = !isBusiness;
+    if (isBusiness) {
+      businessToggleBtn.classList.replace('bg-outline-variant', 'bg-primary');
+      businessToggleKnob.classList.add('translate-x-5');
+      showBusinessField();
+    } else {
+      businessToggleBtn.classList.replace('bg-primary', 'bg-outline-variant');
+      businessToggleKnob.classList.remove('translate-x-5');
+      hideBusinessField();
+    }
+  });
+
+  function showBusinessField() {
+    const field = document.getElementById('businessNameField');
+    field.classList.remove('hidden');
+    // Force reflow
+    void field.offsetWidth;
+    field.style.height = field.scrollHeight + 'px';
+    field.classList.remove('opacity-0', '-translate-y-2');
+    setTimeout(() => {
+        field.style.height = 'auto'; // allow it to grow if needed
+    }, 300);
+  }
+
+  function hideBusinessField() {
+    const field = document.getElementById('businessNameField');
+    field.style.height = field.scrollHeight + 'px';
+    // Force reflow
+    void field.offsetWidth;
+    field.style.height = '0px';
+    field.classList.add('opacity-0', '-translate-y-2');
+    setTimeout(() => {
+        field.classList.add('hidden');
+    }, 300);
+  }
+
+  function togglePassword() {
+    const pwdInput = document.getElementById('password');
+    const icon = document.getElementById('passwordVisibilityIcon');
+    if (pwdInput.type === 'password') {
+      pwdInput.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      pwdInput.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+  
+  // Prevent form submission for demo
+  document.getElementById('authForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const originalText = document.getElementById('submitText').textContent;
+      document.getElementById('submitText').textContent = 'Processing...';
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      setTimeout(() => {
+          document.getElementById('submitText').textContent = originalText;
+          btn.classList.remove('opacity-80', 'cursor-not-allowed');
+      }, 1500);
+  });
+</script></main></body></html>

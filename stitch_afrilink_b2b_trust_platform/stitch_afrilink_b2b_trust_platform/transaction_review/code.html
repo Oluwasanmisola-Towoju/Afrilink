@@ -1,0 +1,234 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed":"#001f2a","background":"#f8f9ff","on-secondary-fixed":"#3c0800","secondary-container":"#fc9174","surface-dim":"#cbdbf5","secondary":"#9a442d","tertiary":"#341b00","tertiary-container":"#4f2f0a","tertiary-fixed-dim":"#f0bd8c","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","tertiary-fixed":"#ffdcbe","primary-fixed-dim":"#a2cde2","surface-container-high":"#dce9ff","inverse-surface":"#213145","secondary-fixed-dim":"#ffb4a1","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary-fixed":"#bde9ff","on-secondary":"#ffffff","on-primary-fixed-variant":"#1f4c5d","on-tertiary-fixed":"#2c1600","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","primary-container":"#073b4c","on-tertiary-container":"#c59669","on-secondary-container":"#742814","surface-bright":"#f8f9ff","outline-variant":"#c1c7cc","outline":"#71787c","on-surface-variant":"#41484b","inverse-primary":"#a2cde2","surface":"#f8f9ff","primary":"#002431","on-tertiary-fixed-variant":"#623f19","on-secondary-fixed-variant":"#7c2e19","surface-tint":"#396476","on-error":"#ffffff","on-primary":"#ffffff","surface-container":"#e5eeff","on-surface":"#0b1c30","error":"#ba1a1a","secondary-fixed":"#ffdbd2","on-primary-container":"#7ba5b9","on-background":"#0b1c30","surface-variant":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"24px","sidebar-width":"280px","unit":"4px","container-max":"1440px","margin-desktop":"32px","margin-mobile":"16px"},"fontFamily":{"headline-md":["Hanken Grotesk"],"body-lg":["Inter"],"data-mono":["JetBrains Mono"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"data-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-low z-50 flex flex-col border-r border-outline-variant"><div class="flex items-center gap-3 px-8 h-20 mb-4"><img alt="AfriLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsTbEOO-nm_1RhdTCxqAToto8mMRC5Lf6E0lxxpcp_hF6JZnbRXs7r6ctjdJbf0t9ITv3-JRXP04x4xTyt-_5F60uTWD-OXIuYN-8HsQLiN0AOsAanJ_Jyw0Djcwa_xQhDIT5JEr0Via6kZ7qguBrT9yQv4YWT4gOIjd5DZn0SG8IAzXCALjXVONR4egW31qQl_qHt1KD9ezSWFgm6nPUsFzBbwU5245gWb6RrGZUFQkqombpkJjI"/><span class="font-headline-md text-headline-md text-primary tracking-tight">AfriLink</span></div><nav class="flex-1 px-4 flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container shadow-sm"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-4">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="discovery" href="#"><span class="material-symbols-outlined mr-4">explore</span>Discovery</a><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all font-label-md bg-primary-container text-on-primary-container shadow-sm" data-path="transactions" href="#"><span class="material-symbols-outlined mr-4">receipt_long</span>Transactions</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="payments" href="#"><span class="material-symbols-outlined mr-4">payments</span>Payments</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="history" href="#"><span class="material-symbols-outlined mr-4">history</span>History</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="disputes" href="#"><span class="material-symbols-outlined mr-4">gavel</span>Disputes</a><div class="my-4 border-t border-outline-variant"></div><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md" data-path="admin" href="#"><span class="material-symbols-outlined mr-4">admin_panel_settings</span>Admin</a></nav><div class="px-4 py-4"><div class="p-4 bg-primary-container rounded-xl flex items-center justify-between shadow-sm"><div class="flex items-center gap-3"><img alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0sfw2oa1H4AGHTGoYCcAzbQbCw-4EA_B8DLom45Sje0ABXrH2qqdqR2U8tRckE3ZhRFs8tJf9affKXUj_o3XvzsHNjlk2kUBkdzTXUDB3R1qfQylzcsXlaz_eD8Xie3Rt3RmHfTlZ_KM6YtyS1bT7DK0HrBiGg7K2PPExhhJyfAqlIqI3LnpFVYpcDq7zZN2K2C5yMcBB2VmSa9pkbXfUs5eAVHLUfjXxtuXVDdM7YRLKU0VgKIE"/><div class="flex flex-col"><span class="font-label-md text-on-primary-container">B. Tunde</span><span class="text-[10px] text-on-primary-container/80 uppercase tracking-widest">Export Manager</span></div></div><span class="material-symbols-outlined text-on-primary-container text-sm">logout</span></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-margin-desktop border-b border-outline-variant"><div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">search</span><input class="bg-transparent border-none focus:ring-0 text-body-sm w-64" placeholder="Search trade assets..." type="text"/></div><div class="flex items-center gap-6"><div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-outline-variant"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="font-label-md text-on-surface">Bank Connection: Active</span></div><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span></div></header><main class="relative pt-20 flex-1 flex flex-col p-margin-desktop"><div class="flex flex-col w-full gap-gutter">
+<!-- Header / Summary Section -->
+<div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between bg-surface-container-low p-8 rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-2 z-10">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-surface-container text-on-surface font-label-md rounded-full uppercase tracking-wider shadow-sm">Review Pending</span>
+<span class="text-on-surface-variant font-data-mono">TXN-8842-AX</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-2">Incoming Trade Proposal</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Kalahari Agri-Corp has submitted a purchase request for Grade A Sorghum. Review terms carefully before proceeding.
+      </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-center z-10 mt-6 lg:mt-0">
+<button class="w-full sm:w-auto px-6 py-3 bg-error text-on-error font-label-md rounded-xl shadow-md hover:bg-error/90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">block</span>
+        Decline
+      </button>
+<button class="w-full sm:w-auto px-6 py-3 bg-secondary text-on-secondary font-label-md rounded-xl shadow-md hover:bg-secondary/90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+        Counter-Offer
+      </button>
+<button class="w-full sm:w-auto px-8 py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+        Accept Transaction
+      </button>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mt-4">
+<!-- Left Column: Counterparty & Logistics -->
+<div class="flex flex-col gap-gutter lg:col-span-1">
+<!-- Counterparty Profile -->
+<div class="bg-surface rounded-xl shadow-sm p-6 flex flex-col gap-6">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">business</span>
+          Buyer Profile
+        </h2>
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center overflow-hidden shadow-sm shrink-0">
+<img class="w-full h-full object-cover" data-alt="A polished corporate logo for an agricultural firm named 'Kalahari Agri-Corp'. The logo uses deep greens and earthy browns on a clean white background, depicting stylized wheat or sorghum stalks. Professional, vector art style, minimalist, suitable for a B2B finance dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA23l1Rjc7wXa8Q8PrOboSKSEPBq6_FaJgoHUSlILJYTpjWJgUMkf7qsnkzJXY5-zQIvRAjqS2gdglvsMySmVPzFMoP7f-jq18MyZPgmZk1-oW049feBqDiapjXbM3fdM-jXYU1OvFuMc6DQUu6cQTbCiG36AToNjJ2INxIHCL6xDqTr_YpQg9wqPNj_5TC3jd6s8Gb4UYLiLXos9mXpNRCO6ZW6BJ-n9wzzDURo_oeGXqhItoFnWc"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Kalahari Agri-Corp</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+              Gaborone, Botswana
+            </span>
+<div class="mt-3 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Verified Partner (Tier 2)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 mt-2">
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Previous Volume</span>
+<span class="font-data-mono text-data-mono text-on-surface">$1.2M USD</span>
+</div>
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg. Settlement</span>
+<span class="font-data-mono text-data-mono text-on-surface">T+3 Days</span>
+</div>
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active Disputes</span>
+<span class="font-data-mono text-data-mono text-on-surface">0</span>
+</div>
+</div>
+</div>
+<!-- Logistics Details -->
+<div class="bg-surface rounded-xl shadow-sm p-6 flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-32 h-32 bg-secondary-container opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+          Logistics
+        </h2>
+<div class="flex flex-col gap-5">
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">INCOTERMS</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold bg-surface-container px-3 py-1 rounded-md inline-block">FOB (Free On Board)</span>
+</div>
+<div class="flex flex-col relative pl-6">
+<!-- Timeline line -->
+<div class="absolute left-[11px] top-2 bottom-2 w-[2px] bg-outline-variant"></div>
+<!-- Origin -->
+<div class="relative pb-6">
+<div class="absolute -left-[30px] top-1 w-[14px] h-[14px] rounded-full bg-surface border-2 border-primary z-10"></div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">PORT OF LOADING</span>
+<span class="font-body-md text-body-md text-on-surface">Lagos Port Complex, NG</span>
+<span class="block font-data-mono text-data-mono text-on-surface-variant mt-1">Requested: Oct 15, 2023</span>
+</div>
+<!-- Destination -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-[14px] h-[14px] rounded-full bg-surface border-2 border-outline-variant z-10"></div>
+<span class="block font-label-md text-label-md text-on-surface-variant mb-1">PORT OF DISCHARGE</span>
+<span class="font-body-md text-body-md text-on-surface">Durban, ZA</span>
+<span class="block font-data-mono text-data-mono text-on-surface-variant mt-1">Expected: Nov 02, 2023</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Details & Financials -->
+<div class="flex flex-col gap-gutter lg:col-span-2">
+<!-- Order Manifest -->
+<div class="bg-surface rounded-xl shadow-md p-0 overflow-hidden flex flex-col">
+<div class="p-6 bg-surface-container-low flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+            Order Manifest
+          </h2>
+<button class="text-primary hover:text-primary-fixed transition-colors flex items-center gap-1 font-label-md">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Export PDF
+          </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest">
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Item Description</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Qty (MT)</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Unit Price</th>
+<th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Total</th>
+</tr>
+</thead>
+<tbody class="bg-surface">
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Grade A White Sorghum</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Moisture < 12%, Non-GMO</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">5,000</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">$280.00</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface font-semibold">$1,400,000.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer border-t border-outline-variant/30">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Freight Forwarding Services</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lagos to Durban Containerized</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">1</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">$45,000.00</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface font-semibold">$45,000.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer border-t border-outline-variant/30">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Marine Insurance (110%)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Comprehensive Cover</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">1</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface">$12,500.00</td>
+<td class="py-4 px-6 text-right font-data-mono text-data-mono text-on-surface font-semibold">$12,500.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-surface-container-lowest p-6 flex flex-col md:flex-row justify-end items-end gap-6 border-t border-outline-variant/50">
+<div class="flex flex-col w-full md:w-64 gap-2">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Subtotal</span>
+<span class="font-data-mono text-data-mono text-on-surface">$1,457,500.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Taxes & Fees (2.5%)</span>
+<span class="font-data-mono text-data-mono text-on-surface">$36,437.50</span>
+</div>
+<div class="h-[1px] bg-outline-variant/50 w-full my-2"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Total Value</span>
+<span class="font-data-mono text-[20px] leading-tight font-bold text-primary">$1,493,937.50</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Settlement Terms -->
+<div class="bg-surface rounded-xl shadow-sm p-6">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+          Settlement Terms
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container p-5 rounded-xl flex flex-col gap-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary text-3xl">currency_exchange</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Letter of Credit (LC)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+               Irrevocable, confirmed LC to be issued by Standard Bank Group, payable at sight upon presentation of compliant documents.
+             </p>
+<div class="mt-auto pt-4 flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">REQUIRED DOCUMENTS</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface rounded-md text-[11px] font-mono text-on-surface border border-outline-variant/30">Commercial Invoice</span>
+<span class="px-2 py-1 bg-surface rounded-md text-[11px] font-mono text-on-surface border border-outline-variant/30">Bill of Lading</span>
+<span class="px-2 py-1 bg-surface rounded-md text-[11px] font-mono text-on-surface border border-outline-variant/30">Phytosanitary Cert</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 justify-center pl-0 md:pl-6">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1">CURRENCY</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">USD (US Dollar)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1">VALIDITY PERIOD</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">14 Days from acceptance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1">COMPLIANCE CHECKS</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-green-600 text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">AML/KYC Cleared</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-green-600 text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Sanctions Screened</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
