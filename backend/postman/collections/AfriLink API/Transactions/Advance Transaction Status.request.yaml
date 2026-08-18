@@ -1,0 +1,20 @@
+$kind: http-request
+name: Advance Transaction Status
+method: POST
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/advance'
+order: 6000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "status": "SHIPPED",
+      "note": "Goods shipped via DHL"
+    }

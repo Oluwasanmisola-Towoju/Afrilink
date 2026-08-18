@@ -1,0 +1,10 @@
+$kind: http-request
+name: Accept Transaction
+method: POST
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/accept'
+order: 4000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'

@@ -1,0 +1,21 @@
+$kind: http-request
+name: Update Evidence Checklist
+method: PATCH
+url: '{{baseUrl}}/api/disputes/{{disputeId}}/evidence'
+order: 3000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "shippingDocument": true,
+      "trackingInfo": true,
+      "communicationLog": false
+    }

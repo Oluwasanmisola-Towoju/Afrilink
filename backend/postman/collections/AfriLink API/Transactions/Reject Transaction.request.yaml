@@ -1,0 +1,10 @@
+$kind: http-request
+name: Reject Transaction
+method: POST
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/reject'
+order: 5000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'

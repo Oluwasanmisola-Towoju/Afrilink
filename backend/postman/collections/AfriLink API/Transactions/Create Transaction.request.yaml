@@ -1,0 +1,26 @@
+$kind: http-request
+name: Create Transaction
+method: POST
+url: '{{baseUrl}}/api/transactions'
+order: 1000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "sellerId": "{{businessId}}",
+      "product": "Cocoa Beans",
+      "quantity": 100,
+      "unitPrice": 250.00,
+      "currency": "USD",
+      "deliveryLocation": "Lagos, Nigeria",
+      "expectedDeliveryDate": "2026-09-30",
+      "paymentConditions": "50% upfront, 50% on delivery"
+    }

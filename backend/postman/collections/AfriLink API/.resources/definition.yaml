@@ -1,0 +1,18 @@
+$kind: collection
+name: AfriLink API
+variables:
+  - key: baseUrl
+    value: 'http://localhost:3000'
+    description: Base URL for the AfriLink API
+  - key: authToken
+    value: ''
+    description: Bearer token for authenticated requests
+  - key: businessId
+    value: ''
+    description: Business ID for path parameter substitution
+  - key: transactionId
+    value: ''
+    description: Transaction ID for path parameter substitution
+  - key: disputeId
+    value: ''
+    description: Dispute ID for path parameter substitution

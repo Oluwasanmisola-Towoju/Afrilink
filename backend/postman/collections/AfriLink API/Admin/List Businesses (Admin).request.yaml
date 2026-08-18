@@ -1,0 +1,19 @@
+$kind: http-request
+name: 'List Businesses (Admin)'
+method: GET
+url: '{{baseUrl}}/api/admin/businesses'
+order: 2000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+queryParams:
+  - key: verified
+    value: 'false'
+    description: Filter by verification status
+    disabled: true
+  - key: search
+    value: ''
+    description: Search by company name
+    disabled: true

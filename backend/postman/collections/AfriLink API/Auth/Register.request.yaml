@@ -1,0 +1,23 @@
+$kind: http-request
+name: Register
+method: POST
+url: '{{baseUrl}}/api/auth/register'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "companyName": "Acme Corp",
+      "country": "Nigeria",
+      "industry": "Agriculture",
+      "registrationNumber": "RC123456",
+      "businessType": "BOTH",
+      "contactEmail": "contact@acme.com",
+      "contactPhone": "+2348012345678"
+    }

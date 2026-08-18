@@ -1,0 +1,15 @@
+$kind: http-request
+name: List Disputes
+method: GET
+url: '{{baseUrl}}/api/disputes'
+order: 1000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+queryParams:
+  - key: status
+    value: OPEN
+    description: Filter by dispute status
+    disabled: true

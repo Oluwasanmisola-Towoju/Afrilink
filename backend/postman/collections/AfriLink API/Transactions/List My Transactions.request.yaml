@@ -1,0 +1,19 @@
+$kind: http-request
+name: List My Transactions
+method: GET
+url: '{{baseUrl}}/api/transactions'
+order: 2000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+queryParams:
+  - key: role
+    value: buyer
+    description: 'Filter by role: buyer or seller'
+    disabled: true
+  - key: status
+    value: CREATED
+    description: Filter by transaction status
+    disabled: true
