@@ -7,6 +7,10 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
+const { connectDB, disconnectDB } = require('./config/dbHandler');
+const apiRoutes = require('./src/routes');
+const { notFound, errorHandler } = require('./src/middleware/error.middleware');
+
 const app = express();
 app.set('trust proxy', 1); // trust first proxy
 
@@ -24,18 +28,31 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Import routes
-
+// health check endpoint
 app.get(`/api/check`, (req, res) => res.json({
     status: 'ok',
     uptime: process.uptime()
 }));
 
+app.use('/api', apiRoutes);
+app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;
-const server = app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+
+let server;
+
+async function start() {
+    await connectDB();
+
+    server = app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+start().catch(err => {
+    console.error('Failed to start server:', err);
+    process.exit(1);
 });
 
 function errorHandler(err, req, res, next) {
