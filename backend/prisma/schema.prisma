@@ -1,0 +1,244 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+}
+
+enum UserRole {
+    BUSINESS
+    ADMIN
+}
+
+enum VerificationStatus {
+    PENDING
+    IN_PROGRESS
+    VERIFIED
+    REJECTED
+}
+
+enum BusinessType {
+    BUYER
+    SELLER
+    BOTH
+}
+
+enum TransactionStatus {
+    CREATED
+    ACCEPTED
+    REJECTED
+    PAYMENT_SECURED
+    SHIPPED
+    IN_TRANSIT
+    DELIVERED
+    PAYMENT_RELEASED
+    COMPLETED
+    DISPUTED
+    CANCELLED
+}
+
+enum PaymentStatus {
+    PENDING
+    FUNDS_SECURED
+    RELEASED
+    REFUNDED
+    FAILED
+}
+
+enum DocumentType {
+    // onboarding / verification documents
+  REGISTRATION_CERTIFICATE
+  TAX_IDENTIFICATION
+  DIRECTOR_ID
+  BANK_STATEMENT
+  // transaction documents
+  PURCHASE_ORDER
+  INVOICE
+  CERTIFICATE_OF_ORIGIN
+  DELIVERY_DOCUMENT
+  OTHER
+}
+
+enum DisputeStatus {
+    OPEN
+    EVIDENCE_REQUESTED
+    RESOLVED_RELEASE
+    RESOLVED_REFUND
+}
+
+model User {
+    id                       String          @id   @default(uuid())
+    email                    String          @unique
+    passwordHash             String          
+    fullName                 String
+    phone                    String?
+    role                     UserRole        @default(BUSINESS)
+
+    businessId               String?         @unique
+    business                 Business?       @relation(fields: [businessId], references: [id])
+    messagesSent             Message[]
+    disputesRaised           Dispute[]       @relation("DisputeRaisedBy")
+    disputesRuled            Dispute[]       @relation("DisputeResolvedBy")
+    documentUploads          Document[]      
+    timelineEvents           TimelineEvent[]
+
+    createdAt                DateTime        @default(now())
+    updatedAt                DateTime        @updatedAt
+
+    @@index([role])
+}
+
+model Business {
+  id                         String            @id @default(uuid())
+  companyName                String
+  country                    String
+  industry                   String
+  businessType               BusinessType      @default(BOTH)
+  registrationNumber         String            @unique
+  taxId                      String?
+  contactEmail               String
+  contactPhone               String?
+
+
+  registrationVerified       Boolean            @default(false)
+  taxIdVerified              Boolean            @default(false)
+  directorVerified           Boolean            @default(false)
+  bankAccountVerified        Boolean            @default(false)
+  verificationStatus         VerificationStatus @default(PENDING)
+
+
+  completedTradesCount       Int                @default(0)
+  disputesCount              Int                @default(0)
+
+  user                       User?
+
+  documents                  Document[]
+  purchasesAsBuyer           Transaction[]      @relation("BuyerTransactions")
+  salesAsSeller              Transaction[]      @relation("SellerTransactions")
+
+  createdAt                  DateTime           @default(now())
+  updatedAt                  DateTime           @updatedAt
+
+  @@index([country, industry])
+  @@index([verificationStatus])
+}
+
+model Transaction {
+  id                         String             @id @default(uuid())
+
+  buyerId                    String
+  buyer                      Business           @relation("BuyerTransactions", fields: [buyerId], references: [id])
+  sellerId                   String
+  seller                     Business           @relation("SellerTransactions", fields: [sellerId], references: [id])
+
+  product                    String
+  quantity                   Int
+  unitPrice                  Decimal            @db.Decimal(14, 2)
+  currency                   String             @default("USD")
+  deliveryLocation           String
+  expectedDeliveryDate       DateTime
+  paymentConditions          String
+
+  status                     TransactionStatus  @default(CREATED)
+
+  payment                    Payment?
+  dispute                    Dispute?
+  documents                  Document[]
+  messages                   Message[]
+  timelineEvents             TimelineEvent[]
+
+  createdAt                   DateTime           @default(now())
+  updatedAt                   DateTime           @updatedAt
+
+  @@index([buyerId])
+  @@index([sellerId])
+  @@index([status])
+}
+
+model TimelineEvent {
+    id                       String              @id @default(uuid())
+    transactionId            String              
+    transaction              Transaction         @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+    status                   TransactionStatus
+    note                     String?
+    actorId                  String?
+    actor                    User?               @relation(fields: [actorId], references: [id])
+    createdAt                DateTime            @default(now())
+
+    @@index([transactionId])
+}
+
+model Payment {
+    id                       String              @id @default(uuid())
+    transactionId            String              @unique
+    transaction              Transaction         @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+     
+    amount                   Decimal             @db.Decimal(14, 2)
+    currency                 String
+    method                   String?
+    provider                 String?
+    status                   PaymentStatus       @default(PENDING)
+
+    escrowReference          String?
+    fundedAt                 DateTime?
+    releasedAt               DateTime?
+
+    createdAt                DateTime             @default(now())
+    updatedAt                DateTime             @updatedAt
+}
+
+model Document {
+  id                         String               @id @default(uuid())
+  type                       DocumentType
+  fileUrl                    String
+  fileName                   String
+
+  businessId                 String?
+  business                   Business?            @relation(fields: [businessId], references: [id])
+  transactionId              String?
+  transaction                Transaction?         @relation(fields: [transactionId], references: [id])
+
+  uploadedById               String?
+  uploadedBy                 User?                @relation(fields: [uploadedById], references: [id])
+ 
+  createdAt                  DateTime             @default(now())
+
+  @@index([businessId])
+  @@index([transactionId]) 
+}
+
+model Message {
+  id                         String               @id @default(uuid())
+  transactionId              String
+  transaction                Transaction          @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  senderId                   String
+  sender                     User                 @relation(fields: [senderId], references: [id])
+  content                    String
+
+  createdAt                  DateTime             @default(now())
+
+  @@index([transactionId])
+}
+
+model Dispute {
+    id                       String               @id @default(uuid())
+    transactionId            String               @unique
+    transaction              Transaction          @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+
+    raisedById               String
+    raisedBy                 User                @relation("DisputeRaisedBy", fields: [raisedById], references: [id])
+
+    reason                   String
+    status                   DisputeStatus        @default(OPEN)
+
+    evidenceChecklist        Json?
+    adminNote                String?
+
+    resolvedById             String?
+    resolvedBy               User?                @relation("DisputeResolvedBy", fields: [resolvedById], references: [id])
+    resolvedAt               DateTime?
+
+    createdAt                DateTime             @default(now())
+    updatedAt                DateTime             @updatedAt
+}
