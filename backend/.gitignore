@@ -1,3 +1,7 @@
 ./generated/prisma
 node_modules
 .env
+/src/generated/prisma
+.agents/skills
+.claude
+.windsurf
