@@ -1,0 +1,23 @@
+$kind: http-request
+name: Search Businesses
+method: GET
+url: '{{baseUrl}}/api/businesses'
+order: 1000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+queryParams:
+  - key: search
+    value: ''
+    description: Search by company name or industry
+    disabled: true
+  - key: country
+    value: ''
+    description: Filter by country
+    disabled: true
+  - key: industry
+    value: ''
+    description: Filter by industry
+    disabled: true

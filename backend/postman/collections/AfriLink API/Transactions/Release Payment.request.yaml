@@ -1,0 +1,10 @@
+$kind: http-request
+name: Release Payment
+method: POST
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/payment/release'
+order: 10000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'

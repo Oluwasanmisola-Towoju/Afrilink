@@ -1,0 +1,20 @@
+$kind: http-request
+name: Verify Business Item
+method: PATCH
+url: '{{baseUrl}}/api/admin/businesses/{{businessId}}/verify'
+order: 3000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "item": "taxId",
+      "verified": true
+    }

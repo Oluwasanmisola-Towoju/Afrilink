@@ -1,0 +1,25 @@
+$kind: http-request
+name: Update My Business
+method: PATCH
+url: '{{baseUrl}}/api/businesses/me'
+order: 3000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "companyName": "Acme Corp Updated",
+      "country": "Nigeria",
+      "industry": "Agriculture",
+      "businessType": "SELLER",
+      "taxId": "TAX123456",
+      "contactEmail": "contact@acme.com",
+      "contactPhone": "+2348012345678"
+    }

@@ -1,0 +1,19 @@
+$kind: http-request
+name: Post Message
+method: POST
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/messages'
+order: 7000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "content": "Hello, when will the goods be shipped?"
+    }

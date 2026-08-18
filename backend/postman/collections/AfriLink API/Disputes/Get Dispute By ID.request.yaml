@@ -1,0 +1,10 @@
+$kind: http-request
+name: Get Dispute By ID
+method: GET
+url: '{{baseUrl}}/api/disputes/{{disputeId}}'
+order: 2000
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{authToken}}'
