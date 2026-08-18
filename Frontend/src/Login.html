@@ -354,7 +354,7 @@
                         Up</button>
                 </div>
 
-                <form>
+                <form id="loginForm" action="/api/auth/login" method="post">
                     <div class="field-group">
                         <div class="label-row">
                             <label for="email">Email Address</label>
@@ -412,6 +412,31 @@
             const isPassword = passwordInput.type === 'password';
             passwordInput.type = isPassword ? 'text' : 'password';
             passwordToggle.textContent = isPassword ? '🙈' : '👁';
+        });
+
+        // Login form submission to match backend request
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            fetch(loginForm.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            }).then(async (res) => {
+                if (!res.ok) {
+                    const text = await res.text().catch(() => 'Login failed');
+                    alert(text || 'Login failed');
+                    return;
+                }
+                // On success, backend should return token/session; redirect to landing for now
+                window.location.href = 'Landing Page.html';
+            }).catch((err) => {
+                console.error(err);
+                alert('Network error. Please try again.');
+            });
         });
     </script>
 </body>

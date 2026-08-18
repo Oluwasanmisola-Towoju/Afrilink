@@ -12,14 +12,14 @@
     <style>
         :root {
             --bg: #f1f3f5;
-            --panel: rgba(255, 255, 255, 0.9);
+            --panel: rgba(255, 255, 255, 0.95);
             --ink: #102a3b;
             --muted: #6e7f90;
-            --accent: #123b4f
+            --accent: #123b4f;
         }
 
         * {
-            box-sizing: border-box
+            box-sizing: border-box;
         }
 
         body {
@@ -29,44 +29,45 @@
             color: var(--ink);
             min-height: 100vh;
             display: grid;
-            place-items: center
+            place-items: center;
+            padding: 28px;
         }
 
         .card {
-            width: min(96vw, 640px);
+            width: min(96vw, 760px);
             background: var(--panel);
             border-radius: 18px;
             padding: 28px;
             border: 1px solid rgba(16, 32, 48, 0.06);
-            box-shadow: 0 22px 40px rgba(11, 28, 38, 0.06)
+            box-shadow: 0 22px 40px rgba(11, 28, 38, 0.06);
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 14px
+            gap: 14px;
         }
 
         .brand img {
             width: 64px;
-            height: auto
+            height: auto;
         }
 
         .brand h1 {
             margin: 0;
-            font-size: 1.6rem
+            font-size: 1.6rem;
         }
 
         form {
             margin-top: 18px;
             display: grid;
-            gap: 12px
+            gap: 12px;
         }
 
         .row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px
+            gap: 12px;
         }
 
         label {
@@ -74,31 +75,33 @@
             color: var(--muted);
             display: block;
             margin-bottom: 6px;
-            font-weight: 600
+            font-weight: 600;
         }
 
-        input {
+        input,
+        select {
             height: 48px;
             padding: 10px 12px;
             border-radius: 10px;
             border: 1px solid rgba(16, 32, 48, 0.08);
-            font-size: 1rem
+            font-size: 1rem;
+            width: 100%;
         }
 
         .full {
-            grid-column: 1/-1
+            grid-column: 1/-1;
         }
 
         .hint {
-            font-size: 0.82rem;
+            font-size: 1rem;
             color: var(--muted);
-            margin-top: 6px
+            margin-top: 6px;
         }
 
         .actions {
             display: flex;
             gap: 12px;
-            margin-top: 8px
+            margin-top: 8px;
         }
 
         .btn {
@@ -109,23 +112,31 @@
             background: var(--accent);
             color: #fff;
             font-weight: 700;
-            cursor: pointer
+            cursor: pointer;
         }
 
         .btn.secondary {
             background: transparent;
             border: 1px solid rgba(16, 32, 48, 0.08);
-            color: var(--ink)
+            color: var(--ink);
         }
 
         .error {
             color: #b0524a;
-            font-size: 0.9rem
+            font-size: 0.9rem;
         }
 
-        @media(max-width:640px) {
+        a{
+            color: #b0524a;
+        }
+
+        @media (max-width: 720px) {
             .row {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
             }
         }
     </style>
@@ -141,35 +152,79 @@
             </div>
         </div>
 
-        <form id="signupForm" action="/api/signup" method="post" novalidate>
+        <form id="signupForm" action="/api/auth/register" method="post" novalidate>
             <div class="row">
                 <div>
-                    <label for="firstName">First name</label>
-                    <input id="firstName" name="firstName" type="text" placeholder="First name" required />
+                    <label for="fullName">Full name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
                 </div>
                 <div>
-                    <label for="surname">Surname</label>
-                    <input id="surname" name="surname" type="text" placeholder="Surname" required />
+                    <label for="companyName">Company name</label>
+                    <input id="companyName" name="companyName" type="text" placeholder="Company or trading name"
+                        required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select country</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Egypt">Egypt</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="industry">Industry</label>
+                    <input id="industry" name="industry" type="text" placeholder="e.g. Agriculture" required />
                 </div>
             </div>
 
             <div>
-                <label for="business">Business name</label>
-                <input id="business" name="business" type="text" placeholder="Company or trading name" required />
-            </div>
-
-            <div>
-                <label for="email">Email address</label>
-                <input id="email" name="email" type="email" placeholder="name@company.com" required />
+                <label for="registrationNumber">Registration number</label>
+                <input id="registrationNumber" name="registrationNumber" type="text" placeholder="RC123456" required />
             </div>
 
             <div class="row">
+                <div>
+                    <label for="contactEmail">Contact email</label>
+                    <input id="contactEmail" name="contactEmail" type="email" placeholder="contact@company.com"
+                        required />
+                </div>
+                <div>
+                    <label for="contactPhone">Contact phone</label>
+                    <input id="contactPhone" name="contactPhone" type="tel" placeholder="+2348012345678" required />
+                </div>
+            </div>
+
+            <div>
+                <label for="businessType">Business type</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="">Select business type</option>
+                    <option value="BOTH">Both (Importer & Exporter)</option>
+                    <option value="IMPORTER">Importer</option>
+                    <option value="EXPORTER">Exporter</option>
+                    <option value="SERVICE">Service Provider</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="name@company.com" required />
+                </div>
                 <div>
                     <label for="password">Password</label>
                     <input id="password" name="password" type="password" placeholder="Create password" minlength="8"
                         required />
                 </div>
-                <div>
+            </div>
+
+            <div class="row">
+                <div class="full">
                     <label for="confirm">Confirm password</label>
                     <input id="confirm" name="confirm" type="password" placeholder="Confirm password" minlength="8"
                         required />
@@ -208,27 +263,32 @@
                 return;
             }
 
-            // NOTE: backend integration placeholder. The backend team should implement /api/signup
-            // For now we perform a simple POST using fetch to the configured endpoint.
             const payload = {
-                firstName: document.getElementById('firstName').value.trim(),
-                surname: document.getElementById('surname').value.trim(),
-                business: document.getElementById('business').value.trim(),
+                fullName: document.getElementById('fullName').value.trim(),
                 email: document.getElementById('email').value.trim(),
                 password: pwd,
+                companyName: document.getElementById('companyName').value.trim(),
+                country: document.getElementById('country').value,
+                industry: document.getElementById('industry').value.trim(),
+                registrationNumber: document.getElementById('registrationNumber').value.trim(),
+                businessType: document.getElementById('businessType').value,
+                contactEmail: document.getElementById('contactEmail').value.trim(),
+                contactPhone: document.getElementById('contactPhone').value.trim(),
             };
 
+            // POST to backend register endpoint
             fetch(form.action, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
             }).then(async (r) => {
                 if (!r.ok) {
-                    const body = await r.text();
+                    let body = '';
+                    try { body = await r.text(); } catch (er) { /* ignore */ }
                     showError(body || 'Failed to create account');
                     return;
                 }
-                // On success redirect to a dashboard or login; backend will decide exact behavior
+                // On success redirect to login (backend may alternatively return token)
                 window.location.href = 'Login.html';
             }).catch((err) => {
                 showError('Network error. Please try again.');
