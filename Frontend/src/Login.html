@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriLink | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg-soft: #f1f3f5;
+            --panel: rgba(255, 255, 255, 0.78);
+            --panel-strong: rgba(255, 255, 255, 0.9);
+            --line: rgba(15, 32, 48, 0.12);
+            --line-soft: rgba(15, 32, 48, 0.08);
+            --ink: #102a3b;
+            --ink-soft: #526877;
+            --ink-faint: #7d8f9e;
+            --navy: #0c2d3f;
+            --teal: #123b4f;
+            --teal-soft: #dfeef5;
+            --shadow: rgba(15, 35, 48, 0.08);
+            --pink: rgba(189, 137, 150, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            font-family: "Inter", sans-serif;
+            background: var(--bg-soft);
+            color: var(--ink);
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            inset: auto;
+            pointer-events: none;
+            filter: blur(40px);
+            opacity: 0.7;
+        }
+
+        body::before {
+            width: 420px;
+            height: 420px;
+            background: rgba(200, 169, 220, 0.18);
+            left: 10%;
+            top: 10%;
+            border-radius: 50%;
+        }
+
+        body::after {
+            width: 420px;
+            height: 420px;
+            background: rgba(255, 220, 210, 0.2);
+            right: 8%;
+            bottom: 6%;
+            border-radius: 50%;
+        }
+
+        .auth-shell {
+            position: relative;
+            z-index: 1;
+            width: min(92vw, 500px);
+            padding: 18px 18px 10px;
+        }
+
+        .auth-card {
+            position: relative;
+            background: var(--panel);
+            border: 1px solid rgba(156, 170, 179, 0.2);
+            border-radius: 22px;
+            box-shadow: 0 26px 50px rgba(13, 30, 42, 0.08);
+            padding: 30px 30px 22px;
+            overflow: hidden;
+            backdrop-filter: blur(6px);
+        }
+
+        .auth-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(153, 167, 178, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(153, 167, 178, 0.04) 1px, transparent 1px);
+            background-size: 18px 18px;
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        .auth-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .brand-icon {
+            width: min(100%, 240px);
+            height: auto;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 10px 14px;
+            box-shadow: 0 10px 24px rgba(16, 42, 59, 0.06);
+            border: 1px solid rgba(16, 42, 59, 0.06);
+            overflow: hidden;
+        }
+
+        .brand-icon img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(16, 42, 59, 0.04));
+        }
+
+        .brand-name {
+            margin-top: 18px;
+            font-size: clamp(2rem, 2vw, 2.5rem);
+            line-height: 1;
+            letter-spacing: -0.07em;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+        }
+
+        .brand-subtitle {
+            margin-top: 8px;
+            text-align: center;
+            color: var(--ink-soft);
+            font-size: 0.93rem;
+            font-weight: 500;
+        }
+
+        .toggle-shell {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            background: rgba(114, 129, 138, 0.08);
+            border: 1px solid var(--line-soft);
+            border-radius: 12px;
+            padding: 6px;
+            margin: 22px 0 18px;
+        }
+
+        .toggle-btn {
+            border: none;
+            background: transparent;
+            color: var(--ink-soft);
+            padding: 12px 14px;
+            font-weight: 600;
+            border-radius: 9px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 180ms ease;
+        }
+
+        .toggle-btn.active {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--ink);
+            box-shadow: 0 4px 10px rgba(15, 35, 48, 0.08);
+        }
+
+        .field-group {
+            margin-bottom: 18px;
+        }
+
+        .label-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            color: var(--ink-soft);
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .password-link {
+            color: var(--ink-soft);
+            text-decoration: none;
+            font-size: 0.76rem;
+        }
+
+        .input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            height: 52px;
+            overflow: hidden;
+            transition: border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .input-wrap:focus-within {
+            border-color: rgba(18, 59, 79, 0.35);
+            box-shadow: 0 0 0 4px rgba(18, 59, 79, 0.06);
+        }
+
+        .input-wrap svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--ink-faint);
+            fill: none;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-left: 14px;
+            flex-shrink: 0;
+        }
+
+        .input-wrap input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            outline: none;
+            color: var(--ink);
+            font-size: 1rem;
+            padding: 0 14px 0 12px;
+            font-family: inherit;
+        }
+
+        .input-wrap input::placeholder {
+            color: var(--ink-faint);
+        }
+
+        .password-toggle {
+            border: none;
+            background: transparent;
+            color: var(--ink-faint);
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            margin-right: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 180ms ease;
+        }
+
+        .password-toggle:hover {
+            background: rgba(18, 59, 79, 0.04);
+        }
+
+        .primary-btn {
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0d2f40, #163d4d);
+            color: white;
+            padding: 16px 18px;
+            font-size: 1.02rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 12px 20px rgba(13, 47, 64, 0.18);
+            transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 22px rgba(13, 47, 64, 0.22);
+        }
+
+        .secure-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            color: var(--ink-soft);
+            font-size: 0.72rem;
+        }
+
+        .secure-row svg {
+            width: 13px;
+            height: 13px;
+            stroke: var(--ink-soft);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .legal {
+            margin-top: 16px;
+            text-align: center;
+            color: var(--ink-faint);
+            font-size: 0.7rem;
+            line-height: 1.6;
+        }
+
+        .legal a {
+            color: var(--ink-soft);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 520px) {
+            .auth-card {
+                padding: 24px 20px 18px;
+            }
+
+            .brand-name {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="auth-shell">
+        <div class="auth-card">
+            <div class="auth-inner">
+                <div class="brand-block">
+                    <div class="brand-icon" aria-label="AfriLink logo">
+                        <img src="../Assets/afrilink_logo.png" alt="AfriLink logo" />
+                    </div>
+                    <div class="brand-subtitle" style="margin-top: 10px;">Secure Trade Finance Gateway</div>
+                </div>
+
+                <div class="toggle-shell" aria-label="Authentication toggles">
+                    <button class="toggle-btn active" type="button">Log In</button>
+                    <button class="toggle-btn" type="button" onclick="window.location.href='SignUp.html'">Sign
+                        Up</button>
+                </div>
+
+                <form>
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" />
+                                <path d="m5 7 7 6 7-6" />
+                            </svg>
+                            <input id="email" type="email" placeholder="name@company.com" />
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+                            <a href="#" class="password-link">Forgot password?</a>
+                        </div>
+                        <div class="input-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="5" y="11" width="14" height="10" rx="2" />
+                                <path d="M8 11V8a4 4 0 1 1 8 0v3" />
+                            </svg>
+                            <input id="password" type="password" placeholder="••••••••" />
+                            <button class="password-toggle" type="button"
+                                aria-label="Toggle password visibility">👁</button>
+                        </div>
+                    </div>
+
+                    <button class="primary-btn" type="submit">Log In</button>
+                </form>
+
+                <div class="secure-row">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M7 10V7a5 5 0 0 1 10 0v3M6 10h12v8.5A1.5 1.5 0 0 1 16.5 20h-9A1.5 1.5 0 0 1 6 18.5V10Z" />
+                    </svg>
+                    <span>End-to-end encrypted</span>
+                </div>
+
+                <div class="legal">
+                    By proceeding, you agree to our <a href="#">Terms of Service</a> &amp; <a href="#">Privacy
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const passwordToggle = document.querySelector('.password-toggle');
+
+        passwordToggle.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            passwordToggle.textContent = isPassword ? '🙈' : '👁';
+        });
+    </script>
+</body>
+
+</html>
